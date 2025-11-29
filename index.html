@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Vivek Arya</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      color: #22223b;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* ---------- Navbar ---------- */
+    nav {
+      display: flex;
+      align-items: center;
+      padding: 18px 40px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-weight: bold;
+      color: #2563eb;
+      margin-right: 40px;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #23233a;
+      font-weight: 500;
+      transition: color .2s, border-bottom .2s;
+    }
+    nav ul li a:hover {
+      color: #6366f1;
+    }
+    nav ul li a.active {
+      border-bottom: 2px solid #6366f1;
+      padding-bottom: 2px;
+    }
+
+    /* ---------- Sections ---------- */
+    section {
+      min-height: 100vh;
+      padding: 140px 20px 40px; /* leave space for fixed navbar */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ---------- Section Backgrounds ---------- */
+    #pf2 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 25% 25%, rgba(255, 127, 80, 0.6), transparent 60%), /* coral */
+              radial-gradient(circle at 75% 25%, rgba(135, 206, 250, 0.6), transparent 60%), /* sky blue */
+              radial-gradient(circle at 50% 70%, rgba(255, 250, 205, 0.5), transparent 70%), /* lemon yellow */
+              radial-gradient(circle at 75% 80%, rgba(221, 160, 221, 0.5), transparent 70%), /* lavender */
+              radial-gradient(circle at 25% 75%, rgba(255, 218, 185, 0.5), transparent 70%); /* peach */
+  animation: gradientMove 15s ease-in-out infinite alternate;
+  background-blend-mode: screen;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 25% 25%, 75% 25%, 50% 70%, 75% 80%, 25% 75%;
+  }
+  50% {
+    background-position: 30% 20%, 70% 30%, 55% 65%, 70% 85%, 30% 70%;
+  }
+  100% {
+    background-position: 20% 30%, 80% 20%, 45% 75%, 80% 75%, 20% 80%;
+  }
+}
+#pf3 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.6), transparent 60%), /* light pink */
+              radial-gradient(circle at 80% 20%, rgba(144, 238, 144, 0.6), transparent 60%), /* mint green */
+              radial-gradient(circle at 60% 75%, rgba(255, 255, 102, 0.5), transparent 70%), /* bright yellow */
+              radial-gradient(circle at 30% 80%, rgba(221, 160, 221, 0.5), transparent 70%), /* lavender */
+              radial-gradient(circle at 50% 50%, rgba(255, 218, 185, 0.5), transparent 70%); /* peach */
+  animation: gradientMovePf3 15s ease-in-out infinite alternate;
+  background-blend-mode: screen;
+}
+
+@keyframes gradientMovePf3 {
+  0% {
+    background-position: 20% 30%, 80% 20%, 60% 75%, 30% 80%, 50% 50%;
+  }
+  50% {
+    background-position: 25% 25%, 75% 25%, 65% 70%, 35% 85%, 55% 55%;
+  }
+  100% {
+    background-position: 15% 35%, 85% 15%, 55% 80%, 25% 75%, 45% 45%;
+  }
+}
+#pf4 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 25% 20%, rgba(255, 160, 122, 0.6), transparent 60%), /* light salmon */
+              radial-gradient(circle at 75% 30%, rgba(173, 216, 230, 0.6), transparent 60%), /* soft sky blue */
+              radial-gradient(circle at 55% 70%, rgba(255, 250, 205, 0.5), transparent 70%), /* lemon chiffon */
+              radial-gradient(circle at 35% 80%, rgba(221, 160, 221, 0.5), transparent 70%), /* lavender */
+              radial-gradient(circle at 50% 50%, rgba(255, 228, 196, 0.5), transparent 70%); /* bisque */
+  animation: gradientMovePf4 15s ease-in-out infinite alternate;
+  background-blend-mode: screen;
+}
+
+@keyframes gradientMovePf4 {
+  0% {
+    background-position: 25% 20%, 75% 30%, 55% 70%, 35% 80%, 50% 50%;
+  }
+  50% {
+    background-position: 30% 25%, 70% 35%, 60% 65%, 40% 85%, 55% 55%;
+  }
+  100% {
+    background-position: 20% 15%, 80% 25%, 50% 75%, 30% 75%, 45% 45%;
+  }
+}
+
+#pf5 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 25%, rgba(144, 238, 144, 0.6), transparent 60%), /* mint green */
+              radial-gradient(circle at 75% 20%, rgba(135, 206, 250, 0.6), transparent 60%), /* sky blue */
+              radial-gradient(circle at 50% 70%, rgba(255, 255, 102, 0.5), transparent 70%), /* bright yellow */
+              radial-gradient(circle at 80% 75%, rgba(173, 255, 47, 0.5), transparent 70%), /* green-yellow */
+              radial-gradient(circle at 30% 80%, rgba(176, 224, 230, 0.5), transparent 70%); /* powder blue */
+  animation: gradientMovePf5 15s ease-in-out infinite alternate;
+  background-blend-mode: screen;
+}
+
+@keyframes gradientMovePf5 {
+  0% {
+    background-position: 20% 25%, 75% 20%, 50% 70%, 80% 75%, 30% 80%;
+  }
+  50% {
+    background-position: 25% 20%, 70% 25%, 55% 65%, 85% 70%, 35% 75%;
+  }
+  100% {
+    background-position: 15% 30%, 80% 15%, 45% 75%, 75% 80%, 25% 85%;
+  }
+}
+#pf6 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 25% 30%, rgba(221, 160, 221, 0.6), transparent 60%), /* lavender */
+              radial-gradient(circle at 75% 25%, rgba(255, 182, 193, 0.6), transparent 60%), /* light pink */
+              radial-gradient(circle at 50% 70%, rgba(255, 160, 122, 0.5), transparent 70%), /* light salmon */
+              radial-gradient(circle at 80% 75%, rgba(173, 216, 230, 0.5), transparent 70%), /* light cyan */
+              radial-gradient(circle at 30% 80%, rgba(255, 228, 196, 0.5), transparent 70%); /* bisque */
+  animation: gradientMovePf6 15s ease-in-out infinite alternate;
+  background-blend-mode: screen;
+}
+
+@keyframes gradientMovePf6 {
+  0% {
+    background-position: 25% 30%, 75% 25%, 50% 70%, 80% 75%, 30% 80%;
+  }
+  50% {
+    background-position: 30% 25%, 70% 30%, 55% 65%, 85% 70%, 35% 75%;
+  }
+  100% {
+    background-position: 20% 35%, 80% 20%, 45% 75%, 75% 80%, 25% 85%;
+  }
+}
+#pf7 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  /* initial positions for all gradients */
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 99, 71, 0.6), transparent 60%) 20% 20% / 100% 100% no-repeat,
+    radial-gradient(circle at 80% 20%, rgba(60, 179, 113, 0.6), transparent 60%) 80% 20% / 100% 100% no-repeat,
+    radial-gradient(circle at 50% 70%, rgba(65, 105, 225, 0.5), transparent 70%) 50% 70% / 100% 100% no-repeat,
+    radial-gradient(circle at 75% 80%, rgba(255, 0, 0, 0.4), transparent 70%) 75% 80% / 100% 100% no-repeat,
+    radial-gradient(circle at 30% 80%, rgba(0, 255, 0, 0.4), transparent 70%) 30% 80% / 100% 100% no-repeat;
+
+  background-blend-mode: screen;
+
+  animation: gradientMovePf7 15s ease-in-out infinite alternate;
+}
+
+@keyframes gradientMovePf7 {
+  0% {
+    background-position: 20% 20%, 80% 20%, 50% 70%, 75% 80%, 30% 80%;
+  }
+  50% {
+    background-position: 25% 25%, 75% 25%, 55% 65%, 70% 85%, 35% 75%;
+  }
+  100% {
+    background-position: 15% 15%, 85% 15%, 45% 75%, 80% 75%, 25% 85%;
+  }
+}
+
+#pf8 { 
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 182, 193, 0.6), transparent 60%), /* light pink */
+              radial-gradient(circle at 80% 20%, rgba(255, 160, 122, 0.6), transparent 60%), /* coral */
+              radial-gradient(circle at 50% 70%, rgba(144, 238, 144, 0.5), transparent 70%), /* mint green */
+              radial-gradient(circle at 75% 80%, rgba(135, 206, 250, 0.5), transparent 70%), /* sky blue */
+              radial-gradient(circle at 30% 80%, rgba(255, 255, 102, 0.5), transparent 70%); /* light yellow */
+  animation: gradientMovePf9 15s ease-in-out infinite alternate;
+  background-blend-mode: screen;
+}
+
+@keyframes gradientMovePf9 {
+  0% {
+    background-position: 20% 20%, 80% 20%, 50% 70%, 75% 80%, 30% 80%;
+  }
+  50% {
+    background-position: 25% 25%, 75% 25%, 55% 65%, 70% 85%, 35% 75%;
+  }
+  100% {
+    background-position: 15% 15%, 85% 15%, 45% 75%, 80% 75%, 25% 85%;
+  }
+}
+
+
+/* Common bubble style */
+.bubble {
+    position: absolute;
+    bottom: -100px; /* start below the screen */
+    background: rgba(39, 37, 37, 0.35); /* darker white */
+    border-radius: 90%;
+    opacity: 0;
+    animation: rise linear infinite;
+}
+
+/* Different sizes */
+.bubble.small { width: 50px; height: 50px; animation-duration: 10s; }
+.bubble.medium { width: 70px; height: 70px; animation-duration: 15s; }
+.bubble.large { width: 90px; height: 90px; animation-duration: 20s; }
+
+/* Rising animation */
+@keyframes rise {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(var(--move-x, 0px)) translateY(-1200px);
+        opacity: 0;
+    }
+}
+
+    /* ---------- Avatar & Rotating Ring ---------- */
+    .avatar-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 26px;
+      margin-top: -145px;
+    }
+
+    .avatar {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      object-fit: cover;
+      z-index: 2;
+    }
+
+    .rotating-ring {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      z-index: 1;
+      background: conic-gradient(
+        #8a2be2 0.005turn, transparent 0.005turn 0.015turn,
+        #00cfff 0.015turn 0.025turn, transparent 0.025turn 0.035turn,
+        #8a2be2 0.035turn 0.045turn, transparent 0.045turn 0.055turn,
+        #8a2be2 0.055turn 0.065turn, transparent 0.065turn 0.075turn,
+        #00cfff 0.075turn 0.085turn, transparent 0.085turn 0.095turn,
+        #8a2be2 0.095turn 0.105turn, transparent 0.105turn 0.115turn,
+        #8a2be2 0.115turn 0.125turn, transparent 0.125turn 0.135turn,
+        #00cfff 0.135turn 0.145turn, transparent 0.145turn 0.155turn,
+        #8a2be2 0.155turn 0.165turn, transparent 0.165turn 0.175turn,
+        #8a2be2 0.175turn 0.185turn, transparent 0.185turn 0.195turn,
+        #00cfff 0.195turn 0.205turn, transparent 0.205turn 0.215turn,
+        #8a2be2 0.215turn 0.225turn, transparent 0.225turn 0.235turn,
+        #8a2be2 0.235turn 0.245turn, transparent 0.245turn 0.255turn,
+        #00cfff 0.255turn 0.265turn, transparent 0.265turn 0.275turn,
+        #8a2be2 0.275turn 0.285turn, transparent 0.285turn 0.295turn,
+        #8a2be2 0.295turn 0.305turn, transparent 0.305turn 0.315turn,
+        #00cfff 0.315turn 0.325turn, transparent 0.325turn 0.335turn,
+        #8a2be2 0.335turn 0.345turn, transparent 0.345turn 0.355turn,
+        #8a2be2 0.355turn 0.365turn, transparent 0.365turn 0.375turn,
+        #00cfff 0.375turn 0.385turn, transparent 0.385turn 0.395turn,
+        #8a2be2 0.395turn 0.405turn, transparent 0.405turn 0.415turn,
+        #8a2be2 0.415turn 0.425turn, transparent 0.425turn 0.435turn,
+        #00cfff 0.435turn 0.445turn, transparent 0.445turn 0.455turn,
+        #8a2be2 0.455turn 0.465turn, transparent 0.465turn 0.475turn,
+        #8a2be2 0.475turn 0.485turn, transparent 0.485turn 0.495turn,
+        #00cfff 0.495turn 0.505turn, transparent 0.505turn 0.515turn,
+        #8a2be2 0.515turn 0.525turn, transparent 0.525turn 0.535turn,
+        #8a2be2 0.535turn 0.545turn, transparent 0.545turn 0.555turn,
+        #00cfff 0.555turn 0.565turn, transparent 0.565turn 0.575turn,
+        #8a2be2 0.575turn 0.585turn, transparent 0.585turn 0.595turn,
+        #8a2be2 0.595turn 0.605turn, transparent 0.605turn 0.615turn,
+        #00cfff 0.615turn 0.625turn, transparent 0.625turn 0.635turn,
+        #8a2be2 0.635turn 0.645turn, transparent 0.645turn 0.655turn,
+        #8a2be2 0.655turn 0.665turn, transparent 0.665turn 0.675turn,
+        #00cfff 0.675turn 0.685turn, transparent 0.685turn 0.695turn,
+        #8a2be2 0.695turn 0.705turn, transparent 0.705turn 0.715turn,
+        #8a2be2 0.715turn 0.725turn, transparent 0.725turn 0.735turn,
+        #00cfff 0.735turn 0.745turn, transparent 0.745turn 0.755turn,
+        #8a2be2 0.755turn 0.765turn, transparent 0.765turn 0.775turn,
+        #8a2be2 0.775turn 0.785turn, transparent 0.785turn 0.795turn,
+        #00cfff 0.795turn 0.805turn, transparent 0.805turn 0.815turn,
+        #8a2be2 0.815turn 0.825turn, transparent 0.825turn 0.835turn,
+        #8a2be2 0.835turn 0.845turn, transparent 0.845turn 0.855turn,
+        #00cfff 0.855turn 0.865turn, transparent 0.865turn 0.875turn,
+        #8a2be2 0.875turn 0.885turn, transparent 0.885turn 0.895turn,
+        #8a2be2 0.895turn 0.905turn, transparent 0.905turn 0.915turn,
+        #00cfff 0.915turn 0.925turn, transparent 0.925turn 0.935turn,
+        #8a2be2 0.935turn 0.945turn, transparent 0.945turn 0.955turn,
+        #8a2be2 0.955turn 0.965turn, transparent 0.965turn 0.975turn,
+        #00cfff 0.975turn 0.985turn, transparent 0.985turn 0.995turn,
+        #8a2be2 0.995turn 1turn
+      );
+      animation: spinRing 12s linear infinite;
+    }
+
+    @keyframes spinRing {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 { margin: 0 0 8px 0; font-size: 2.8rem; font-weight: 700; color: #6d28d9; text-align: center; }
+    h2 { color: #eab308; font-size: 1.25rem; margin: 0 0 18px 0; font-weight: 500; text-align: center; }
+    .desc { max-width: 500px; text-align: center; margin-bottom: 30px; font-size: 1.14rem; color: #4b5563; }
+
+    .button-group { display: flex; gap: 14px; margin-bottom: 35px; flex-wrap: wrap; justify-content: center; }
+    .btn { padding: 12px 20px; background: #2563eb; color: #fff; border: none; border-radius: 5px; font-size: 1rem; font-weight: 500; cursor: pointer; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: background .18s, transform 0.2s; }
+    .btn.secondary { background: #fff; color: #2563eb; border: 1px solid #2563eb; }
+    .btn.secondary:hover { background: #e0e7ff; }
+    .btn:hover:not(.secondary) { background: #1d4ed8; }
+    .btn i { transition: transform 1.2s ease; }
+    .btn:hover i { transform: rotate(360deg); }
+
+    .scroll-section { text-align: center; color: #6b7280; cursor: pointer; animation: moveUpDown 2.5s ease-in-out infinite; transition: color 0.3s, transform 0.3s; margin-top: 20px; }
+    .scroll-section:hover { color: #2563eb; transform: scale(1.05); }
+    .scroll-text { font-size: 1.2rem; font-weight: 500; margin-bottom: 5px; letter-spacing: 0.5px; }
+    .scroll-arrow { font-size: 1.8rem; }
+    @keyframes moveUpDown { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+    .footer-credit { position: fixed; bottom: 10px; left: 10px; font-size: 1rem; }
+
+    @media (max-width: 600px) {
+      nav { flex-direction: column; align-items: flex-start; padding: 12px 15px; }
+      .container { padding: 24px 0; }
+      h1 { font-size: 2rem; }
+      .avatar-wrapper { width: 100px; height: 100px; }
+      .avatar { width: 80px; height: 80px; }
+      .rotating-ring { width: 100px; height: 100px; }
+    }
+
+    /* -------------------- Skills Section Styles -------------------- */
+    .skills-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        max-width: 1200px;
+        margin: 0 auto 42px auto;
+    }
+
+    .skill-card {
+        flex: 0 0 45%;
+        min-width: 220px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0,55,100,0.055);
+        border-radius: 16px;
+        padding: -10px 20px;
+        transition: box-shadow 0.4s ease, transform 0.4s ease;
+        cursor: pointer;
+    }
+
+    .skill-card:hover { box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3); transform: translateY(-4px); }
+
+    .skill-card strong, .skill-card .section-label { font-size: 1.14rem; font-weight: 600; color: #23233a; display: block; margin-bottom: 17px; }
+    .section-label { color: #2563eb; font-size: 1rem; display: inline-block; border-radius: 8px; padding: 2px 11px; margin-bottom: 13px; font-weight: 500; letter-spacing: 1px; }
+
+    .icon-grid { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; }
+
+    .icon-item { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 80px; gap: 6px; cursor: pointer; transition: transform 0.5s ease, color 0.3s ease; padding: 6px; border-radius: 12px; text-align: center; }
+    .icon-item:hover { transform: translateY(-5px) scale(1.05); }
+    .icon-item:hover i, .icon-item:hover img { transform: rotate(30deg); }
+    .icon-item i, .icon-item img { font-size: 2.2rem; margin-bottom: 4px; color: #2a4365; transition: transform 0.6s ease, color 0.3s ease; }
+    .icon-item span { font-size: 0.95rem; color: #374151; font-weight: 500; text-align: center; transition: color 0.3s ease; }
+    .icon-item.clicked { transform: rotate(-20deg) scale(1.05); }
+    .icon-item.clicked i, .icon-item.clicked img { transform: rotate(-30deg); }
+    .skill-card.tools-tech .icon-item i, .skill-card.tools-tech .icon-item img { font-size: 4.5rem; }
+    .skill-card.tools-tech .icon-item span { font-size: 1.05rem; }
+
+    @media (max-width: 900px) { .skill-card { flex: 0 0 90%; } }
+    /* ---------- Projects Section ---------- */
+.projects-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  gap: 28px;
+  max-width: 1160px;
+  margin: 0 auto 44px auto; /* bottom spacing optional */
+}
+
+.project-card {
+  
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(0,55,100,0.025);
+  padding: 24px 21px 20px 21px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-top: 5px solid #d1d5db;
+  transition: box-shadow .2s, border-color .2s, background .2s;
+  min-height: 256px;
+}
+
+.project-card[data-color="blue"]     { border-top-color: #2563eb; }
+.project-card[data-color="purple"]   { border-top-color: #7c3aed; }
+.project-card[data-color="orange"]   { border-top-color: #fb923c; }
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* remove background/color transition if not needed */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* lifts the card */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* subtle shadow for lift effect */
+}
+
+/* Optional: keep different colored shadows if you want to indicate card type */
+.project-card[data-color="blue"]:hover {
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+}
+
+.project-card[data-color="purple"]:hover {
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.25);
+}
+
+.project-card[data-color="orange"]:hover {
+  box-shadow: 0 12px 24px rgba(251, 146, 60, 0.25);
+}
+
+/* Remove hover color changes for text */
+.project-card h3 {
+  font-size: 1.17rem;
+  font-weight: 600;
+  margin: 0 0 9px 0;
+  color: #082032; /* stays constant */
+}
+
+
+.project-desc {
+  font-size: 1.01rem;
+  color: #374151;
+  margin-bottom: 16px;
+  min-height: 56px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: #f1f5f9;
+  color: #334155;
+  border-radius: 7px;
+  padding: 2.5px 12px;
+  font-size: .95rem;
+  font-weight: 500;
+}
+
+.actions {
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 7px 17px;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  background: #f5f7fa;
+  color: #1d2654;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .15s, border-color .18s, color .16s;
+}
+
+.btn:hover, .btn:focus {
+  background: #edf5fd;
+  border-color: #2563eb;
+  color: #abc1f1;
+}
+
+.btn .arrow {
+  transform: rotate(295deg);
+  transition: transform .26s cubic-bezier(.4,2,.3,.9);
+}
+
+.btn.visit:hover .arrow {
+  transform: rotate(0deg);
+  color: #ffffff;
+}
+
+/* Watermark at bottom-left */
+.corner-watermark {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects-section {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    padding: 18px 16px 16px 16px;
+  }
+  .btn { padding: 6px 14px; font-size: .95rem; }
+}
+.lafda{
+  margin-top: -155px;
+}
+.locha{
+  margin-top: -185px;
+}
+.chal{
+  margin-top: -265px;
+}
+.hal{
+  margin-top: 145px;
+}
+/* ===== Resume Section ===== */
+#resume {
+    padding: 40px 20px;
+    color: #23233a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resume .main-title {
+    font-size: 2.35rem;
+    font-weight: bold;
+    color: #3730a3;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#resume .subtitle {
+    font-size: 1.12rem;
+    color: #4b5563;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Resume Card */
+.resume-card {
+    max-width: 625px;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 2px 13px rgba(0,55,100,0.055);
+    border-top: 8px solid #7c3aed;
+    padding: 32px 26px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.resume-card .header-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 26px;
+}
+
+.resume-card .icon-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    width: 99px;
+    height: 99px;
+    transition: transform 0.5s ease;
+    background: linear-gradient(135deg, #7c3aed 40%, #a78bfa 100%);
+}
+
+.resume-logo {
+    font-size: 3.2rem;
+    color: #fff;
+    transition: transform 0.6s ease;
+}
+
+.resume-logo:hover {
+    transform: rotate(30deg);
+}
+
+.resume-card .resume-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-card .resume-title {
+    font-size: 1.23rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1px;
+}
+
+.resume-card .resume-role {
+    font-size: 1rem;
+    color: #2d3748;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.resume-card .resume-update {
+    font-size: 0.92rem;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.resume-card .actions-row {
+    display: flex;
+    gap: 13px;
+    margin: 16px 0 9px 0;
+}
+
+.resume-card .btn {
+    padding: 10px 22px;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #a78bfa;
+    color: #fff;
+    background: linear-gradient(90deg, #2563eb 0%, #7c3aed 80%);
+    box-shadow: 0 1px 6px rgba(60,80,170,0.07);
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background .16s, box-shadow .18s;
+}
+
+.btn i.fa-download {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i.fa-download {
+    transform: translateY(-4px);
+}
+
+.resume-card .btn:hover {
+    background: linear-gradient(90deg, #7c3aed 10%, #2563eb 80%);
+    box-shadow: 0 3px 16px rgba(60,80,170,0.13);
+}
+
+.resume-card .btn-outline {
+    background: #fff;
+    color: #2563eb;
+    border: 1px solid #cbd5e1;
+    font-weight: 500;
+}
+
+.btn-outline i.fa-eye {
+    transition: transform 0.3s ease;
+}
+
+.btn-outline:hover i.fa-eye {
+    transform: scale(1.2);
+}
+
+.resume-card .btn-outline:hover {
+    background: #f1f6fd;
+    border-color: #7c3aed;
+    color: #7c3aed;
+}
+
+.resume-stats {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.resume-stat {
+    text-align: center;
+    flex: 1;
+}
+
+.resume-stat .stat-major {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.resume-stat .stat-major.stat-tech { color: #ef4444; }
+.resume-stat .stat-major.stat-cert { color: #1097ff; }
+
+.resume-stat .stat-label {
+    font-size: 1.02rem;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+/* Watermark */
+.corner-watermark {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .resume-card {padding: 18px 5px;}
+    .resume-card .header-row {flex-direction: column; gap: 15px;}
+    .resume-card .icon-square {width: 80px; height: 80px;}
+    .resume-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #resume .main-title {font-size: 1.4rem; margin-top: 18px;}
+}
+/* ===== Education Section ===== */
+.edu-section {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+/* Education Card */
+.edu-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,55,100,0.055);
+    padding: 26px 28px;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    border-left: 6px solid #2563eb;
+    transition: all 0.25s ease;
+    position: relative;
+    height:125px;
+}
+
+/* Dot on the left middle side of each card */
+.edu-card::after {
+    content: '';
+    position: absolute;
+    left: -12px; /* slightly outside the card */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: #2563eb;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.edu-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.19);
+    transform: translateY(-4px);
+    border-left-color: #1d4ed8;
+}
+
+/* Icon inside card */
+.edu-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #2563eb 32%, #a78bfa 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edu-icon i {
+    color: #fff;
+    font-size: 2.1rem;
+}
+
+/* Info inside card */
+.edu-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.edu-title {
+    font-weight: bold;
+    font-size: 1.13rem;
+    margin-bottom: 1px;
+    color: #161a22;
+}
+.edu-school {
+    color: #2563eb;
+    font-size: 1.04rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-decoration: none;
+}
+.edu-school:hover { text-decoration: underline; }
+.edu-details {
+    font-size: 0.98rem;
+    color: #374151;
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+}
+.edu-details .fa-location-dot,
+.edu-details .fa-calendar { color: #a3a3a3; margin-right: 4px; }
+.edu-details strong { color: #0ea21f; font-weight: 600; }
+.edu-gpa { font-size: 0.97rem; color: #1097ff; font-weight: 600; margin-left: 14px; }
+.edu-points { margin-top: 12px; padding-left: 1.1em; margin-left: 0; }
+.edu-points li { font-size: 0.99rem; padding: 2px 0; color: #374151; }
+
+/* Responsive */
+@media (max-width: 700px) {
+    .edu-section { max-width: 94vw; }
+    .edu-card {
+        flex-direction: column;
+        gap: 13px;
+        padding: 18px 9px;
+    }
+    .edu-icon { width: 45px; height: 45px; }
+}
+@media (max-width: 600px) {
+    .main-title { font-size: 1.35rem; margin-top: 16px; }
+    .subtitle { font-size: 1rem; }
+}
+/* 🌟 PF7 - Achievements & Certifications Section */
+/* Headings */
+#pf7 .main-title {
+  text-align: center;
+  font-size: 2.35rem;
+  font-weight: bold;
+  color: #7c3aed;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+#pf7 .subtitle {
+  text-align: center;
+  color: #4b5563;
+  font-size: 1.12rem;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout */
+#pf7 .achievements-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Achievement Card */
+#pf7 .achieve-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,55,100,0.048);
+  padding: 26px 19px 18px 19px;
+  border-top: 6px solid #2563eb;
+  transition: box-shadow 0.23s, transform 0.17s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Color Variants */
+#pf7 .achieve-card[data-color="red"]    { border-color: #ef4444; }
+#pf7 .achieve-card[data-color="blue"]   { border-color: #2563eb; }
+#pf7 .achieve-card[data-color="orange"] { border-color: #fb923c; }
+#pf7 .achieve-card[data-color="indigo"] { border-color: #4187e7; }
+#pf7 .achieve-card[data-color="purple"] { border-color: #a78bfa; }
+#pf7 .achieve-card[data-color="green"]  { border-color: #15b981; }
+
+/* Hover Effects */
+#pf7 .achieve-card:hover {
+  transform: translateY(-18px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(19,26,30,0.23);
+  z-index: 2;
+}
+
+/* Icon */
+#pf7 .achieve-icon {
+  font-size: 2.35rem;
+  margin-bottom: 8px;
+  background: #f6f7fa;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  color: #8884ff;
+}
+
+#pf7 .achieve-card[data-color="red"]    .achieve-icon { color: #ef4444; }
+#pf7 .achieve-card[data-color="blue"]   .achieve-icon { color: #2563eb; }
+#pf7 .achieve-card[data-color="orange"] .achieve-icon { color: #fb923c; }
+#pf7 .achieve-card[data-color="indigo"] .achieve-icon { color: #4187e7; }
+#pf7 .achieve-card[data-color="purple"] .achieve-icon { color: #a78bfa; }
+#pf7 .achieve-card[data-color="green"]  .achieve-icon { color: #15b981; }
+
+/* Icon Spin Animation */
+#pf7 .achieve-icon:hover {
+  animation: spin360 0.7s linear;
+}
+@keyframes spin360 {
+  0% { transform: rotate(0deg);}
+  80% {transform: rotate(360deg);}
+  100% {transform: rotate(360deg);}
+}
+
+/* Text Styles */
+#pf7 .achieve-title {
+  font-size: 1.07rem;
+  font-weight: 700;
+  color: #1d2651;
+  margin-bottom: 5px;
+  text-align: center;
+  transition: color 0.22s;
+}
+
+#pf7 .achieve-card:hover .achieve-title {
+  color: #2563eb;
+}
+
+#pf7 .achieve-org {
+  font-size: 1.01rem;
+  color: #6c757d;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+#pf7 .achieve-date {
+  font-size: 0.99rem;
+  color: #71728f;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  #pf7 .achievements-section {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  #pf7 .main-title {
+    font-size: 1.35rem;
+  }
+  #pf7 .subtitle {
+    font-size: 1rem;
+  }
+}
+.risu{
+  margin-top: -183px;
+}
+/* ====== CONTACT SECTION STYLES ====== */
+.contact-section {
+  background: #f5f7fa;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.contact-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #7c3aed
+;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.contact-container {
+  max-width: 950px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 1px 30px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.contact-card {
+  background: #eef2fb;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 22px;
+  border-radius: 9px;
+  box-shadow: 0 2px 8px rgba(70,99,172,0.08);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.contact-card:hover {
+  transform: translateX(32px) scale(1.04);
+  box-shadow: 0 8px 18px rgba(70,99,172,0.14);
+  background: #e1e7f6;
+  z-index: 2;
+}
+
+.contact-card .icon {
+  background: #4663ac;
+  color: #fff;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card-label {
+  font-size: 0.98rem;
+  color: #607096;
+  font-weight: 500;
+}
+
+.card-value {
+  font-size: 1.08rem;
+  color: #283447;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.social-media {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-media a {
+  color: #4663ac;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #213963;
+}
+
+.send-message {
+  flex: 1.3;
+  border-left: 1px solid #e8eaf1;
+  padding-left: 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 21px;
+  gap: 5px;
+}
+
+.form-group label {
+  color: #506490;
+  font-size: 0.99rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #cfdbee;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 1.05rem;
+  outline: none;
+  resize: none;
+  background: #f3f7fb;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1.5px solid #4162b7;
+}
+
+.send-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #4663ac 60%, #213963 100%);
+  color: #fff;
+  padding: 13px 0;
+  font-size: 1.14rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+.send-btn:hover {
+  background: linear-gradient(90deg, #213963 40%, #4663ac 100%);
+}
+
+@media (max-width: 920px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 30px 10px;
+  }
+  .send-message {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 32px;
+  }
+}
+.cold {
+  margin-top: -100px;
+}
+.icon-item img {
+  width: 50px;      /* adjust size as needed */
+  height: 50px;     /* maintain square aspect ratio */
+  object-fit: contain;  /* ensures the image scales properly */
+  display: block;   /* removes small inline spacing */
+  margin-right: 8px; /* spacing between image and text */
+  
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* optional, spacing between image and text */
+}
+.send-message { max-width: 400px; margin: 50px auto; }
+  .form-group { margin-bottom: 15px; }
+  label { display: block; margin-bottom: 5px; }
+  input, textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+  .send-btn { padding: 10px 20px; cursor: pointer; }
+  .projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.project-card {
+  flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  min-width: 200px; /* ensures cards don’t shrink too small */
+  transition: all 0.3s ease;
+}
+
+/* Tablet: 3 cards but smaller */
+@media (max-width: 1080px) {
+  .project-card {
+    flex: 1 1 calc(45% - 20px); /* smaller cards, almost 2 per row */
+    padding: 15px;
+  }
+}
+
+/* Mobile: 3 cards visible, smaller size */
+@media (max-width: 480px) {
+  .projects-section {
+    flex-wrap: nowrap; /* keep cards in one row */
+    overflow-x: auto;  /* allow horizontal scroll */
+  }
+
+  .project-card {
+    flex: 0 0 40%; /* each card takes 70% width of viewport */
+    min-width: 220px;
+    padding: 12px;
+    margin-right: 10px; /* spacing between cards */
+  }
+}
+/* Base layout: flex side by side for larger screens */
+#pf8 .contact-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Contact info cards */
+#pf8 .contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Responsive: for small screens */
+@media (max-width: 400px) {
+  #pf8 .contact-container {
+    flex-direction: column; /* stack vertically */
+    gap: 15px;
+  }
+
+  #pf8 .contact-info,
+  #pf8 .send-message {
+    width: 100%; /* full width on small devices */
+  }
+
+  #pf8 .contact-card {
+    flex-direction: row;  /* icon + text inline */
+    gap: 10px;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #pf8 .contact-card .icon {
+    font-size: 18px;
+    min-width: 30px;
+  }
+
+  #pf8 .send-message form input,
+  #pf8 .send-message form textarea,
+  #pf8 .send-message form button {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #pf8 .contact-title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  #pf8 .social-media a {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+}
+#pf8 .contact-title{
+  margin-top: -100px;
+}
+
+  </style>
+</head>
+<body>
+  
+  <nav>
+    <span class="logo"><i class="fa-solid fa-code"></i>VA</span>
+    <ul>
+      <li><a href="#pf2">Home</a></li>
+      <li><a href="#pf3">Skills</a></li>
+      <li><a href="#pf4">Projects</a></li>
+      <li><a href="#pf5">Resume</a></li>
+      <li><a href="#pf6">Education</a></li>
+      <li><a href="#pf7">Achievements</a></li>
+      <li><a href="#pf8">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="pf2">
+     <div class="bubble small" style="left: 10%; --move-x: 80px;"></div>
+    <div class="bubble medium" style="left: 40%; --move-x: -120px;"></div>
+    <div class="bubble large" style="left: 70%; --move-x: 150px;"></div>
+    <div class="avatar-wrapper">
+      <img src="meri.jpg" alt="Vivek Arya" class="avatar">
+      <div class="rotating-ring"></div>
+    </div>
+    <h1>Vivek Arya</h1>
+    <h2>✨ Full Stack Developer & Problem Solver ✨</h2>
+    <div class="desc">
+      Passionate software engineer with expertise in building scalable applications. I love turning complex problems into elegant solutions and creating delightful user experiences. Currently exploring cutting-edge technologies and contributing to open-source projects.
+    </div>
+    <div class="button-group">
+      <a class="btn" href="mailto:avrajput0409@email.com"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
+      <a class="btn secondary" href="https://share.google/QOCDFsu37XEvQDykm" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/vivek-arya-335996251" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+    <div class="scroll-section" onclick="scrollDown('#pf3')">
+      <div class="scroll-text">Scroll to Explore</div>
+      <div class="scroll-arrow"><i class="fa-solid fa-angle-down"></i></div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="pf3">
+    <div class="bubble small" style="left: 10%; --move-x: 80px;"></div>
+    <div class="bubble medium" style="left: 40%; --move-x: -120px;"></div>
+    <div class="bubble large" style="left: 70%; --move-x: 150px;"></div>
+    <div class="lafda">
+    <h1 class="main-title">Skills & Technologies</h1></div>
+   <br><br><br>
+    <div class="skills-section">
+      <div class="skill-card">
+        <strong>Programming Languages</strong>
+        <div class="icon-grid">
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"/><span>C</span></div>
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/><span>C++</span></div>
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/><span>JavaScript</span></div>
+          <div class="icon-item python"><i class="fab fa-python"></i><span>Python</span></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="section-label">Frontend</span>
+        <div class="icon-grid">
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/><span>React</span></div>
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/><span>HTML5</span></div>
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/><span>CSS3</span></div>
+          <div class="icon-item"><img src="https://imgs.search.brave.com/si28AG8RaZ7bLA4Or61BXlsPGTYxzEGd3u3rbMc3nbk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzM1LzEvdGFpbHdp/bmQtY3NzLWxvZ28t/cG5nX3NlZWtsb2dv/LTM1NDY3NS5wbmc" alt="TailwindCSS"/><span>TailwindCSS</span></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <strong>Backend & Database</strong>
+        <div class="icon-grid">
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/><span>Node.js</span></div>
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"/><span>MongoDB</span></div>
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/><span>MySQL</span></div>
+          <div class="icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/><span>PostgreSQL</span></div>
+        </div>
+      </div>
+
+      <div class="skill-card tools-tech">
+        <strong>Tools & Technologies</strong>
+        <div class="icon-grid">
+          <div class="icon-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+          <div class="icon-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+          <div class="icon-item"><i class="fab fa-vuejs" style="color:#326ce5"></i><span>VS Code</span></div>
+          <div class="icon-item"><i class="fab fa-linux"></i><span>Linux</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Sections -->
+
+<section id="pf4">
+  <div class="bubble small" style="left: 10%; --move-x: 80px;"></div>
+    <div class="bubble medium" style="left: 40%; --move-x: -120px;"></div>
+    <div class="bubble large" style="left: 70%; --move-x: 150px;"></div>
+  <div class="locha">
+  <h1 class="main-title">Featured Projects</h1></div><br>
+ <br><br><br><br>
+  <div class="projects-section">
+    <!-- Project 1 -->
+    <div class="project-card" data-color="blue">
+      <h3>Pahadi Rasoi</h3>
+      <div class="project-desc">
+        A cultural food discovery platform designed to preserve and promote the traditional cuisines of Himachal Pradesh, Punjab, and Jammu & Kashmir that are gradually fading away. It enables users to explore authentic local dishes, recipes, and culinary heritage.
+      </div>
+      <div class="tags">
+        <div class="tag">HTML</div>
+        <div class="tag">CSS</div>
+        <div class="tag">JavaScript</div>
+        <div class="tag">MySQL</div>
+      </div>
+      <div class="actions">
+        <a class="btn visit" href="https://easycooking.great-site.net" target="_blank">
+          Visit <i class="fas fa-arrow-right arrow"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card" data-color="purple">
+      <h3>Automated Datesheet Generator</h3>
+      <div class="project-desc">
+        A web-based solution developed for my university to automate the creation of examination date sheets. It replaces the manual process with an intelligent system that ensures proper date gaps, conflict-free scheduling, and streamlined management.
+      </div>
+      <div class="tags">
+        <div class="tag">HTML</div>
+        <div class="tag">CSS</div>
+        <div class="tag">JavaScript</div>
+        <div class="tag">MySQL</div>
+      </div>
+      <div class="actions">
+        <a class="btn visit" href="https://hptuexam.kesug.com" target="_blank">
+          Visit <i class="fas fa-arrow-right arrow"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card" data-color="orange">
+      <h3>Portfolio Website</h3>
+      <div class="project-desc">
+        The personal portfolio you’re currently viewing — designed and developed from scratch to showcase my projects, achievements, and skills in a simple yet engaging format. It reflects my design sense and technical creativity.
+      </div>
+      <div class="tags">
+        <div class="tag">HTML</div>
+        <div class="tag">CSS</div>
+        <div class="tag">JavaScript</div>
+        <div class="tag">Base44</div>
+      </div>
+      <div class="actions">
+        <a class="btn visit" href="https://goatfolio.kesug.com" target="_blank">
+          Visit <i class="fas fa-arrow-right arrow"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="pf5">
+    <div class="bubble small" style="left: 10%; --move-x: 80px;"></div>
+    <div class="bubble medium" style="left: 40%; --move-x: -120px;"></div>
+    <div class="bubble large" style="left: 70%; --move-x: 150px;"></div>
+    <div class="chal">
+  <h1 class="main-title">Resume</h1></div>
+  <br><br><br>
+
+  <div class="resume-card">
+    <div class="header-row">
+      <div class="icon-square">
+        <i class="fas fa-file-alt resume-logo"></i>
+      </div>
+      <div class="resume-info">
+        <span class="resume-title">Vivek Arya - Resume</span>
+        <span class="resume-role">Full Stack Developer</span>
+        <span class="resume-update">Last updated: October 2025</span>
+        <div class="actions-row">
+<!-- TailwindCSS + Font Awesome Download Button -->
+<a class="btn flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+   href="RESUME.zip" 
+   download="VivekArya_Resume.zip">
+  <i class="fas fa-download"></i>
+  Download Resume
+</a>
+
+          <a class="btn btn-outline" href="RESUME.pdf"><i class="fas fa-eye"></i> View Online</a>
+        </div>
+      </div>
+    </div>
+    <div class="resume-stats">
+      <div class="resume-stat">
+        <div class="stat-major stat-tech">15+</div>
+        <div class="stat-label">Technologies</div>
+      </div>
+      <div class="resume-stat">
+        <div class="stat-major stat-cert">10+</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+  <section id="pf6">
+    <div class="bubble small" style="left: 10%; --move-x: 80px;"></div>
+    <div class="bubble medium" style="left: 40%; --move-x: -120px;"></div>
+    <div class="bubble large" style="left: 70%; --move-x: 150px;"></div>
+     <div class="hal">
+    <h1 class="main-title">Education</h1></div>
+    <br><br><br>
+
+    <div class="edu-section">
+        <!-- BTech Card -->
+        <div class="edu-card">
+            <div class="edu-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="edu-info">
+                <div class="edu-title">Bachelor of Technology in Computer Science & Engineering</div>
+                <a class="edu-school" href="https://himtu.ac.in" target="_blank">
+  Himachal Pradesh Technical University
+</a>
+                <div class="edu-details">
+                    <span><i class="fa-solid fa-location-dot"></i> Hamirpur, HP</span>
+                    <span><i class="fa-regular fa-calendar"></i> 2022 - 2026</span>
+                    <span class="edu-gpa">CGPA till 6th Sem: <strong>8.08</strong></span>
+                </div>
+                <ul class="edu-points">
+                    <li>Working on a live Cyber Security project</li>
+                    <li>Active web developer using HTML, CSS, JS</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Class 12 Card -->
+        <div class="edu-card">
+            <div class="edu-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="edu-info">
+                <div class="edu-title">Class 12 (Non-Medical)</div>
+                <a class="edu-school" href="https://schools.org.in/kangra/02020403103/gsss-dadasiba.html" target="_blank">BKR GSSS Dada Siba</a>
+                <div class="edu-details">
+                    <span><i class="fa-solid fa-location-dot"></i> Dada Siba, HP</span>
+                    <span><i class="fa-regular fa-calendar"></i> 2022</span>
+                    <span class="edu-gpa">Percentage: <strong>92%</strong></span>
+                </div>
+                <ul class="edu-points">
+                    <li>NSS participant</li>
+                    <li>UNICEF Reporter</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Class 10 Card -->
+        <div class="edu-card">
+            <div class="edu-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="edu-info">
+                <div class="edu-title">Class 10</div>
+                <a class="edu-school" href="https://schools.org.in/kangra/02020403103/gsss-dadasiba.html" target="_blank">BKR GSSS Dada Siba</a>
+                <div class="edu-details">
+                    <span><i class="fa-solid fa-location-dot"></i> Dada Siba, HP</span>
+                    <span><i class="fa-regular fa-calendar"></i> 2020</span>
+                    <span class="edu-gpa">Percentage: <strong>91.7%</strong></span>
+                </div>
+                <ul class="edu-points">
+                    <li>Various inter and intra level quiz participant</li>
+                    <li>Class Monitor</li>
+                </ul>
+            </div>
+        </div><BR><BR><BR><BR><BR><BR><BR><BR>
+    </div>
+</section>
+  <section id="pf7">
+<div class="bubble small" style="left: 10%; --move-x: 80px;"></div>
+    <div class="bubble medium" style="left: 40%; --move-x: -120px;"></div>
+    <div class="bubble large" style="left: 70%; --move-x: 150px;"></div>
+    <div class="risu">
+  <h1 class="main-title">Achievements & Certifications</h1></div>
+  <br><br><br><BR><br>
+  <div class="achievements-section">
+
+    <!-- 🏆 Card 1 -->
+    <div class="achieve-card" data-color="red">
+      <span class="achieve-icon"><i class="fa-solid fa-user-shield"></i></span>
+      <span class="achieve-title">Ethical Hacking Training</span>
+      <div class="achieve-org">Internshala</div>
+      <div class="achieve-date">July 2024</div>
+    </div>
+
+    <!-- 💻 Card 2 -->
+    <div class="achieve-card" data-color="green">
+      <span class="achieve-icon"><i class="fa-solid fa-laptop-code"></i></span>
+      <span class="achieve-title">IDE Bootcamp Experience</span>
+      <div class="achieve-org">NIT Surathkal</div>
+      <div class="achieve-date">September 2024</div>
+    </div>
+
+    <!-- 💡 Card 3 -->
+    <div class="achieve-card" data-color="blue">
+      <span class="achieve-icon"><i class="fa-solid fa-lightbulb"></i></span>
+      <span class="achieve-title">Vaulthesit Participation - National Level Hackathon</span>
+      <div class="achieve-org">CGC Jhanjheri</div>
+      <div class="achieve-date">October 2025</div>
+    </div>
+
+  </div>
+</section>
+  
+<section id="pf8">
+  <div class="bubble small" style="left: 10%; --move-x: 80px;"></div>
+    <div class="bubble medium" style="left: 40%; --move-x: -120px;"></div>
+    <div class="bubble large" style="left: 70%; --move-x: 150px;"></div>
+  <div class="cold">
+  <div class="contact-title">Get In Touch</div></div>
+  <br><br>
+
+  <div class="contact-container">
+    <div class="contact-info"><BR><BR><BR>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="icon"><i class="fa fa-envelope"></i></div>
+          <div class="card-info">
+            <div class="card-label">Email</div>
+            <div class="card-value">avrajput0409@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon"><i class="fa fa-phone"></i></div>
+          <div class="card-info">
+            <div class="card-label">Phone</div>
+            <div class="card-value">+91 8988103771</div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+          <div class="card-info">
+            <div class="card-label">Location</div>
+            <div class="card-value">Hamirpur, HP</div>
+          </div>
+        </div>
+      </div>
+<BR>
+      <div class="social-media">
+       &nbsp; <a href="https://share.google/QOCDFsu37XEvQDykm" title="GitHub"><i class="fab fa-github"></i></a> &nbsp;  &nbsp; 
+        <a href="https://www.linkedin.com/in/vivek-arya-335996251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn"><i class="fab fa-linkedin"></i></a> &nbsp;  &nbsp; 
+        <a href="https://x.com/vivekarya045" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="send-message">
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input id="name" type="text" placeholder="Enter Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input id="email" type="email" placeholder="Enter Mail" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Enter Message" required></textarea>
+        </div>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("wkfGRj-EU2_3XPfNt"); // Replace with your EmailJS user ID
+  })();
+</script>
+  <script>
+    // Scroll down to section
+    function scrollDown(sectionId) {
+      document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Highlight current section in navbar
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 160; // navbar height offset
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // Optional: highlight on page load
+    window.addEventListener('load', () => {
+      let event = new Event('scroll');
+      window.dispatchEvent(event);
+    });
+
+    // Rotate icons on click in Skills section
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.icon-item').forEach(icon => {
+        icon.addEventListener('click', () => {
+          icon.classList.toggle('clicked');
+        });
+      });
+    });
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    emailjs.sendForm('service_ehv991k', 'template_x6bnjre', this)
+      .then(function() {
+        alert('Message sent successfully!');
+      }, function(error) {
+        alert('Failed to send message. Please try again.\nError: ' + JSON.stringify(error));
+      });
+  });
+  </script>
+</body>
+</html>
